@@ -1,0 +1,111 @@
+// =======================================> SIGN UP 
+// =======================================> SIGN UP 
+// =======================================> SIGN UP 
+
+.body-signup {
+  background-color: rgb(19, 18, 18);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.header-signup {
+  background-color: rgb(119, 116, 116);
+  width: 100%;
+  height: 60px;
+}
+
+.mainbody-signup {
+  border: solid 2px rgb(119, 116, 116);
+  margin-top: 50px;
+  padding: 20px;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px;
+}
+
+.page-title {
+  margin: 0 auto 0px;
+  color: rgb(119, 116, 116);
+  font-size: 1.5em;
+
+}
+
+.input-fields-form {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+
+}
+
+.form-label {
+  color: rgb(123, 127, 131);
+  font-size: 1.1em;
+  margin: 15px 0 0px 30px;
+}
+
+.input-field-container {
+  margin: 10px auto;
+  width: 65%;
+}
+
+.input-fields {
+  width: 100%;
+  height: 35px;
+  padding: 15px;
+  background-color: rgb(190, 197, 202);
+  border: none;
+  border-bottom: solid 3px rgb(2, 2, 2);
+  box-shadow: 0px 0.25px white;
+  font-size: 1.2em;
+}
+
+.submit-button-signup {
+  width: 50%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.error-title {
+  font-size: 0.9em;
+}
+
+.errors-signup {
+  color: red;
+  font-size: 0.7em;
+  margin: 10px auto;
+}
+
+.submit-button {
+  width: 120px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  background-color: rgba(4, 104, 255, 0.993);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  box-shadow: 1px 1px rgb(124, 113, 113);
+
+  &:hover {
+    box-shadow: 0.25px 0.25px rgb(124, 113, 113);
+  }
+
+  &:active {
+    box-shadow: 0.25px 0.25px rgb(124, 113, 113);
+  }
+}
+
+.login-link-signup {
+  color: rgb(123, 127, 131);
+  margin: 10px auto 0;
+}
+
+.login-link:visited {
+  color: rgba(4, 104, 255, 0.993);
+}

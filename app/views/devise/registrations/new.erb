@@ -1,0 +1,76 @@
+<body class = "body-signup">
+
+  <div class = "header-signup">
+    <div class = "appname">
+     Stocks Up
+    </div>
+  </div>
+
+  <div class = "mainbody-signup">
+
+     <div class = 'page-title'>  
+      Sign up 
+     </div> 
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+        <div class = "input-fields-form">
+          <div class="field">
+            <div class = "form-label">
+              Email:
+            </div>
+            <div class = "input-field-container">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input-fields' %>
+            </div>
+          </div>
+
+          <div class="field">
+             <div class = "form-label">
+              Username:
+            </div>
+            <div class = "input-field-container">
+              <%= f.text_field  :username, autofocus: true, autocomplete: "Username", class: 'input-fields' %>
+            </div>
+          </div>
+
+          <div class="field">
+             <div class = "form-label">
+              Password: 
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %>
+            </div>
+            <div class = "input-field-container">
+              <%= f.password_field :password, autocomplete: "new-password", class: 'input-fields' %>
+            </div>
+          </div>
+
+          <div class="field">
+             <div class = "form-label">
+              Confirm Password:
+            </div>
+            <div class = "input-field-container">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'input-fields' %>
+            </div>
+          </div>
+        </div>
+
+        <div class = "errors-signup">
+          <%= render "devise/shared/error_messages", resource: resource %>
+        </div>
+
+        <div class="submit-button-signup">
+          <%= f.submit "Sign up", class: 'submit-button' %>
+        </div>
+
+    <% end %>
+
+    <div class = "login-link-signup">
+    Already have an account?
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Log in", new_session_path(resource_name), class: 'login-link' %>
+      <% end %>
+    </div>
+  </div>
+
+</body>
