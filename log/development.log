@@ -2163,3 +2163,55 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 7682)
 
 
+Started GET "/users/sign_in" for ::1 at 2020-09-26 10:00:35 +0800
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.erb within layouts/application
+  Rendered devise/sessions/new.erb within layouts/application (Duration: 43.4ms | Allocations: 3921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 246ms (Views: 154.4ms | ActiveRecord: 1.9ms | Allocations: 22774)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-26 10:01:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.erb within layouts/application
+  Rendered devise/sessions/new.erb within layouts/application (Duration: 3.9ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 5475)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-26 10:01:08 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.erb within layouts/application
+  Rendered devise/sessions/new.erb within layouts/application (Duration: 2.2ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 5477)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-26 10:01:12 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.erb within layouts/application
+  Rendered devise/shared/_error_messages.erb (Duration: 1.6ms | Allocations: 164)
+  Rendered devise/registrations/new.erb within layouts/application (Duration: 6.2ms | Allocations: 1422)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 6843)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-09-26 10:02:16 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.erb within layouts/application
+  Rendered devise/sessions/new.erb within layouts/application (Duration: 1.8ms | Allocations: 719)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms | Allocations: 5473)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-09-26 10:02:17 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.erb within layouts/application
+  Rendered devise/shared/_error_messages.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered devise/registrations/new.erb within layouts/application (Duration: 2.9ms | Allocations: 624)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 5320)
+
+
