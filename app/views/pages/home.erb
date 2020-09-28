@@ -1,10 +1,48 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body class = "home-page-body">
 
+  <div class = "header-home-page">
+    <div class = "app-name-home-page">
+     Top Market
+    </div>
 
-<% if current_user %>
-  <%= link_to  "Sign Out", destroy_user_session_path, method: :delete %>
-<%else%>
-  <%= link_to  "Sign In", new_user_session_path %>
-  <%= link_to  "Sign Up", new_user_registration_path %>
-<% end %>
+    <div class = "user-name-options">
+      <div class = "user-title-home-page">
+        <%= current_user.username%>
+      </div>
+      <div class = user-options-home-page>
+        <% if current_user %>
+          <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: 'links-users-option-home-page' %>
+        <%else%>
+          <%= link_to  "Sign In", new_user_session_path %>
+          <%= link_to  "Sign Up", new_user_registration_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class = "main-body-home-page">  
+    <div class = "options-home-page">
+      <div class = "bought-list">
+      </div>
+      <div class = "interest-list">
+      </div>
+    </div>
+
+    <div class = "display-home-page">
+      <div class = "title-of-list">
+        Category
+      </div> 
+
+      <div class = "show-list">
+        <% @categories.each do |category|%>
+          <div class = "category-items">
+            <%= link_to show_category_path(access_keyword: category.access_keyword) do %>
+              <%= category.category_name%>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <div>
+  </div>
+
+</body>
