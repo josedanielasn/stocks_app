@@ -1,0 +1,77 @@
+<body class = "home-page-body">
+
+  <div class = "header-home-page">
+    <div class = "app-name-home-page">
+     Top Market
+    </div>
+
+    <div class = "user-name-options">
+      <div class = "user-title-home-page">
+        <%= current_user.username%>
+      </div>
+      <div class = user-options-home-page>
+        <% if current_user %>
+          <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class: 'links-users-option-home-page' %>
+        <%else%>
+          <%= link_to  "Sign In", new_user_session_path %>
+          <%= link_to  "Sign Up", new_user_registration_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class = "main-body-home-page">  
+    <div class = "options-home-page">
+      <div class = "bought-list">
+        <div class = "bought-list-title">
+          Purchased
+        </div>
+        <div class = "bought-list-items">
+
+        </div>
+      </div>
+      <div class = "interest-list">
+        <div class = "interest-list-title">
+          Interests
+        </div>
+        <div class = "interest-list-items">
+          <% if @interest == nil%>
+            <div class = "empty">
+              empty
+            </div>
+          <%else%>
+            <% @interest.each do |item| %>
+              <div class = "interest-list-item">
+
+              </div>
+            <%end%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+
+    <div class = "display-home-page">
+      <div class = "title-of-list">
+        <%= @category.category_name%>
+      </div> 
+
+      <div class = "show-list-company">
+        <table class = "company-items-table">
+          <% @list_company.each do |info|%>
+            <tr class = "company-items <%= @list_company.index(info) % 2 != 0 ? 'odd' : 'even' %>">
+              <td class = "company-name"><%= info.company_name%></td>
+              <td class = "company-price"><%= info.latest_price%></td>
+              <td class = "company-percentage <%= info.change_percent_s.to_f < 0 ? 'negative': ''%>"><%= info.change_percent_s%></td>
+              <td>
+               <%= link_to  "Save", create_interest_path(access_keyword: params[:access_keyword], symbol: info.symbol), method: :create, class: "save-link" %>
+               <%= link_to  "Buy", create_purchase_path(access_keyword: params[:access_keyword], symbol: info.symbol), method: :create, class: "buy-link" %>
+              </td>             
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    <div>
+  </div>
+
+</body>
+
